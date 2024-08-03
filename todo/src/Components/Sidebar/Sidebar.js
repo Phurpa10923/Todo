@@ -35,7 +35,7 @@ export default function Sidebar({showSidebar,toggleSideBar,setAddTaskVisibility}
         >
           <img
             className=""
-            src={`${process.env.PUBLIC_URL}/logo192.png`}
+            src={`${process.env.PUBLIC_URL}/logo.png`}
             alt="Logo"
           ></img>
         </div>

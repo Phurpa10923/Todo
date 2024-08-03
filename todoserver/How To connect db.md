@@ -1,0 +1,1 @@
+First , download MongoDb shell (https://www.mongodb.com/try/download/shell) and MongoDbServer (https://www.mongodb.com/try/download/community) from this two site . 
