@@ -1,0 +1,276 @@
+
+.taskItemContainer{
+    cursor: pointer;
+}
+.taskItem{
+    height: auto;
+    text-align: start;
+    cursor: inherit;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 2px 1px 2px var(--color-hover-backgroundcolor);
+}
+.taskItem div{
+    cursor: inherit;
+}
+.taskItem:hover{
+    box-shadow: 2px 5px 4px var(--color-hover-backgroundcolor);
+}
+.tasktitleContainer{
+    position: relative;
+    height: 20%;
+}
+.tasktitleContainer>span:first-child{
+    font-size: 16px;
+    color: var(--color-text-bold);
+    font-weight: 500;
+}
+
+.taskitemactions{
+    cursor: pointer;
+    line-height: 0%;
+    transition: all 0.3s linear;
+}
+.taskitemactions button{
+    border: none;
+    background-color: inherit;
+}
+.taskitemactions button:hover{
+    transform: scale(1.3);
+}
+input[type='checkbox']{
+    position: relative;
+    border-radius: 50%;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 0.2px solid rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+input[type='checkbox']:checked {
+    border: none;
+    background-color: var(--color-task-checked); /* Example: Green background when checked */
+}
+input[type='checkbox']:checked:hover:after {
+    display: none; /* Example: Green background when checked */
+}
+input[type='checkbox']:hover::after {
+    content: '\2713'; /* Check mark character */
+    color: var(--color-shadow);
+    font-size: 14px; /* Adjust font size as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+input[type='checkbox']:hover:after {
+    color: white;
+    content: 'Mark as done'; 
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+    width: 100px;
+    top: 200%;
+    border-radius: 4px;
+    background-color: var(--color-shadow);
+    padding: 5px 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.taskitemdescription{
+    height: 50%;
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+.taskitemdescription span{
+    padding: 6px 0;
+}
+
+.taskitemstatus{
+    height: 10%;
+    
+}
+.taskitemstatus span{
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color:var(--color-secondary) ;   
+    color: var(--color-text);
+}
+
+.taskItem.remove{
+    opacity: 0;
+}
+.scrollbar{
+    display: flex;
+    justify-content: center;
+}
+.scrollbar>div:first-child{
+    transition: all 1s linear;
+}
+
+.addItem span{
+    text-align: start;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    font-size: 15px;
+}
+.addItem span:hover{
+    color: var(--color-addToDo-background);
+}
+
+.addTaskContainer{
+    border: 1px solid var(--color-shadow);
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+.addTaskContainer > span{
+    margin: 5px;
+}
+.addTaskContainer >form > input ,.addTaskContainer textarea{
+    width: 100%;
+    height: auto;
+    border: none; 
+    padding: 3px 10px;
+    outline: none; 
+    overflow: hidden; /* Hide overflow to allow auto-grow */
+    resize: none; /* Remove the resize icon */
+}
+.addTaskContainer >form > input {
+    font-weight: bold;
+}
+ input[type='date']{
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+}
+.dateContainer{
+    position: relative;
+    width: 20%;
+    cursor: pointer;
+    padding: 3px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--color-light-gray);
+}
+.addTaskContainer > form >footer {
+    border-top: 1px solid var(--color-shadow);
+}
+.addTaskContainer >form >footer > button{
+    padding: 5px 10px;
+    border: none;
+    width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+
+}
+button.save{
+    color: var(--color-white);
+    background-color: var(--color-orange);
+}
+.disabled{
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+button.cancel{
+    background-color: lightgray;
+}
+
+@media only screen and (max-width:540px) {
+    .dateContainer{
+        width: 35%;
+    }
+    .addTaskContainer >form >footer > button{
+        width: 50px;
+    }
+}
+
+
+.edittaskContainer{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 500;
+    font-size: 13px;
+    background-color: rgba(85, 85, 85, 0.7);
+}
+.editBox{
+    max-height: 70%;
+    border-radius: 10px;
+    height: auto;
+    background-color: var(--color-hover-backgroundcolor);;
+}
+
+.editBox header{
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    box-shadow: 0px 0px 4px black;
+}
+.editactions{
+    font-size: 13px;
+}
+.editactions button{
+    padding: 3px 10px;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+.editcontrols{
+    margin-bottom: 50px;
+}
+.editcontrols input , .editcontrols textarea{
+    border: none;
+    outline: none;
+    padding: 10px 5px;
+    margin: 0px 4px;
+    resize: none;
+}
+.editcontrols input {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--color-text-bold);
+}
+.editcontrols textarea{
+    font-size: 12px;
+    font-weight: lighter;
+    color: var(--color-text-light);
+}
+.editBox span{
+    text-align: end;
+}
+.editcontrols input::placeholder {
+    color: var(--color-text-bold);
+    font-weight: 500;
+}
+
+.editcontrols  textarea::placeholder{
+    color: var(--color-text-light);
+    font-weight: 100;
+}
+.customdropdown{
+    background: var(--color-light-gray);
+    color: var(--color-text);
+    border-radius: 4px;
+}
+.customdropdownitem{
+    background-color: var(--color-light-gray);
+    color: var(--color-text);
+}
+
+.editsave{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    box-shadow: 0px 0px 3px var(--color-shadow);
+}
+.editcancel{
+    box-shadow: 0px 0px 3px var(--color-shadow);
+}
+
+.editsave:hover , .editcancel:hover{
+    transform: scale(1.1);
+}

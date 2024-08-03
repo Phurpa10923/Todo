@@ -1,0 +1,103 @@
+.sidebarContainer{
+    position:absolute;
+    height: 100vh;
+    background-color: var( --color-sidebar-background) ;
+    box-shadow: 00px 10px white;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; 
+    z-index: 10;
+    transition: all 0.2s linear; 
+}
+.sidebarContainer.showSidebar{
+    transform: translateX(0);
+}
+.sidebarContainer.hideSidebar{
+    transform: translateX(-100%);
+}
+.sidebarContainer .toggleSidebar{
+    position:relative;
+}
+.sidebarContainer.showSidebar .toggleSidebar{
+    left: 0;
+}
+.sidebarContainer.hideSidebar .toggleSidebar{
+    left: 50%;
+}
+.profile{
+    height: 5vh;
+}
+.profile>span{
+    font-size: 25px;
+    line-height: 0;
+}
+.userProfileContainer{
+    width: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+.userProfileContainer>span{
+    font-size: 30px;
+}
+.userProfileContainer > img{
+    width: 100%;
+    object-fit: cover;
+}
+.sidebarTabs > ul{
+    list-style: none;
+    text-align: start;
+    padding: 0 10px;
+    font-size: inherit;
+}
+.sidebarTabs > ul > li{
+    color: var(--color-tab-inactive);
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    gap: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebarTabs > ul >li.activeTab , .sidebarTabs > ul >li:hover{
+    background-color: var(--color-secondary);
+    font-size: 15px;
+}
+.sidebarTabs > ul >li:first-child:hover{
+    /* color: var(--color-tab-active); */
+    background-color: var(--color-secondary);
+    color: var(--color-orange);
+    font-size: 15px;
+}
+
+.logoutContainer{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.logoutContainer >button {
+    width: 150px;
+    padding: 10px;
+    font-size: 22px;
+    background: transparent;
+}
+
+
+@media only screen and (max-width:540px) {
+    .sidebarTabs > ul{
+        font-size: 16px;
+    }
+    .sidebarContainer{
+        position: absolute;
+    }
+    .sidebarContainer.hideSidebar .toggleSidebar{
+        left: 30%;
+    }
+    .profile>span{
+        font-size: 20px;
+    }
+}

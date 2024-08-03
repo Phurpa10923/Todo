@@ -1,0 +1,87 @@
+:root {
+  --color-light-gray: #5B6B74;
+  --color-dark-gray: #353944;
+  --color-light-blue: #46BDC6;
+  --color-white: white;
+  --color-orange: #A15640;
+
+  
+
+  --color-primary: var(--color-orange);
+  --color-secondary: var(--color-dark-gray);
+  --color-background: var(--color-white);
+  --color-text: var(--color-white);
+  --color-accent: var(--color-light-blue);
+  --color-shadow:black;
+  --navbar-color: var(--color-secondary);
+
+  --color-sidebar-background:var(--color-light-gray);
+  --color-tab-inactive:var(--color-text);
+  --color-tab-active:var(--color-primary);
+  --color-inactive-tab:var(--color-text);
+  --color-active-tab:var(--color-primary);
+
+  --color-main-background:var(--color-white);
+  --color-search-shadow:black;
+
+  --color-addToDo-background:var(--color-orange);
+
+  --color-addtaskmaincontainer:0,0,0;
+  --color-popup-main:var(--color-light-gray);
+
+  --color-task-checked:var(--color-orange);
+
+  --color-shadow:#808080;
+
+  --color-text-bold:#4b4b4b;
+  --color-text-light:#585858;
+  --color-text-lighter:#828282;
+  --color-hover-backgroundcolor:#efefef ; 
+}
+
+
+.App {
+  text-align: center;
+  transition: all 0.2s linear;
+  z-index: 1;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.ps--active-x > .ps__rail-x,.ps--active-y > .ps__rail-y{
+  padding: 0 0;   
+}
