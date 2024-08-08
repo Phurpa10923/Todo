@@ -1,5 +1,5 @@
 
-# Todo App
+# Todo App (MERN Stack)
 
 A full-stack Todo application built using ReactJs and Redux for the frontend and Node.js, Express, and MongoDB for the backend.
 
@@ -22,7 +22,7 @@ Follow these instructions to set up and run the project locally on your machine.
    mongosh
    ```
 
-###Running app locally 
+### Running app locally 
 
 1.  Install all the packages required for front end and backend by going to respecitve folder and executing
 	```
